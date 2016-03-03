@@ -1,3 +1,8 @@
+function Point(x, y) {
+	this.x = x;
+	this.y = y;
+}
+
 function drawRegularPolygon(mContext, center, len, num) {
 	if(num < 3 || len <= 0) {
 		return;
@@ -46,3 +51,9 @@ function drawRegularPolygon(mContext, center, len, num) {
 	}
 	return array;
 }
+
+$(function() {
+	var center = new Point(200, 200);
+	var len = 200;
+	drawRegularPolygon(document.getElementById("menu").getContext("2d"), center, len, 15);
+});
